@@ -41,15 +41,20 @@
   var RADIUS_SCALE = 1;
   var RADIUS_SCALE_MIN = 1;
   var RADIUS_SCALE_MAX = 1.5;
-  var PARTICLE_SIZE = 10;
+  var PARTICLE_SIZE = 3.5;
 
   var INFECTED_COLOR = '#FF0000';
   var UNINFECTED_COLOR = '#EFB752';
   var IMMUNE_COLOR = '#7F00FF'
   var RECOVERY_DURATION = 5 * 1000;
-  var PERCENT_INIT_INFECTED = 0.1;
+  var PERCENT_INIT_INFECTED = 0.01;
   
-  var QUANTITY = 200;
+  var QUANTITY = 1000;
+  var numParticlesSlider = document.getElementById('numParticles');
+  numParticlesSlider.setAttribute('min', 2);
+  numParticlesSlider.setAttribute('max', QUANTITY * 2);
+  numParticlesSlider.setAttribute('value', QUANTITY)
+  document.getElementById('numParticlesMax').innerHTML = QUANTITY * 2
   function simulate() {
     var canvas;
     var context;
@@ -57,7 +62,6 @@
     var paused = true;
 
     function init(){
-  
       canvas = document.getElementById('world');
   
       if(canvas && canvas.getContext) {

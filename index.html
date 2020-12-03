@@ -14,7 +14,9 @@
     <canvas id="world"></canvas>
     <div id="setting">
         <div id="parameters">
-            <input class="bar" type="range" id="numParticles" min="1" max="400" value="200"/>
+            <label for="numParticles" class="particlesRangeLabel" id=numParticlesMin>1</label>
+            <input class="bar" type="range" id="numParticles"/>
+            <label for="numParticles" class="particlesRangeLabel" id="numParticlesMax"></label>
         </div>
         <button type="button" id="restart">Restart</button>
         <button type="button" id="pause">Play</button>
