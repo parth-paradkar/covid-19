@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Vaccination Simulation</title>
+</head>
+<body>
+    <div id="tracker">
+        <div class="tracker-field">Uninfected: <span id="uninfected-count"></span></div>
+        <div class="tracker-field">Infected: <span id="infected-count"></span></div>
+        <div class="tracker-field">Immune: <span id="immune-count"></span></div>
+    </div>
+    <canvas id="world"></canvas>
+    <div id="setting">
+        <div id="parameters">
+            <input class="bar" type="range" id="numParticles" min="1" max="400" value="200"/>
+        </div>
+        <button type="button" id="restart">Restart</button>
+        <button type="button" id="pause">Play</button>
+    </div>
+
+</body>
+<script src="index.js"></script>
+</html>
